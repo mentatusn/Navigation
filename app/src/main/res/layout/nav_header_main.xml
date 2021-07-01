@@ -7,9 +7,18 @@
     android:background="@drawable/side_nav_bar"
     android:layout_height="200dp">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
-        android:text="БОКОВОЕ МЕНЮ"/>
+        android:text="Вася Пупкике"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="ДР 12.21.2412"/>
 </LinearLayout>

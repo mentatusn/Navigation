@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
                 drawerLayout,toolbar,(R.string.open),(R.string.close));
@@ -47,11 +48,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                switch (id) {
+                    case R.id.action_one_more:
+                        fragmentTransaction.replace(R.id.fragment_container, new MainFragment());
+                        fragmentTransaction.commit();
+                }
                 return false;
             }
         });
 
-        setSupportActionBar(toolbar);
+
+
         initButtonBack();
         initButtonMain();
         initButtonFavorite();

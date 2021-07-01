@@ -20,4 +20,11 @@
 
         android:title="@string/favorite"
         app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_one_more"
+        android:orderInCategory="8"
+        android:icon="@android:drawable/star_big_on"
+
+        android:title="Еще одна"
+        app:showAsAction="ifRoom"/>
 </menu>
